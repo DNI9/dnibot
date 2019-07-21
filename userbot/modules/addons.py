@@ -1,12 +1,11 @@
 import asyncio, subprocess
 import time, re, io, os
-#from userbot import bot, LOGGER, LOGGER_GROUP, HELPER
 from telethon import events, functions, types
 from telethon.events import StopPropagation
 from telethon.tl.functions.messages import ExportChatInviteRequest
 from telethon.tl.functions.contacts import BlockRequest
 from telethon.tl.functions.channels import LeaveChannelRequest, CreateChannelRequest, DeleteMessagesRequest
-#from lmgtfy import lmgtfy
+from lmgtfy import lmgtfy
 from collections import deque
 from telethon.tl.functions.users import GetFullUserRequest
 from userbot.events import register
@@ -16,7 +15,7 @@ from selenium import webdriver
 from urllib.parse import quote_plus
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
-from userbot import CMD_HELP, ZALG_LIST
+from userbot import bot, BOTLOG, BOTLOG_CHATID, CMD_HELP, ZALG_LIST
 
 @register(outgoing=True, pattern="^.leave$")
 async def leave(e):
