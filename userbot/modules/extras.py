@@ -11,6 +11,18 @@ async def fail(e):
                      "`\n████▌▄▌▄▐▐▌▀████ `"       
                      "`\n▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ `")    
           
+@register(outgoing=True, pattern="^.rip$")
+async def lol(e):
+    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        await e.edit("`\n (   (   (     `" 
+                     "`\n )\ ))\ ))\ )  `"       
+                     "`\n(()/(()/(()/(  `" 
+					      "`\n /(_))(_))(_)) `" 
+					      "`\n(_))(_))(_))   `" 
+					      "`\n| _ \_ _| _ \  `" 
+					      "`\n|   /| ||  _/  `" 
+                     "`\n|_|_\___|_|    `") 
+           
 @register(outgoing=True, pattern="^.lol$")
 async def lol(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
