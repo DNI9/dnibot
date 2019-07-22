@@ -81,6 +81,11 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY", None
 )
 
+GDRIVE_FOLDER = os.environ.get(
+    "GDRIVE_FOLDER", None
+)
+
+
 SPOTIFY_USERNAME = os.environ.get("SPOTIFY_USERNAME", None)
 SPOTIFY_PASS = os.environ.get("SPOTIFY_PASS", None)
 SPOTIFY_BIO_PREFIX = os.environ.get("SPOTIFY_BIO_PREFIX", None)
