@@ -30,3 +30,4 @@ lmgtfy
 lxml
 oauth2client
 PyDrive
+pyDownload
