@@ -346,7 +346,7 @@ async def nothanos(unbon):
             await unbon.edit("`Uh oh my unban logic broke!`")
 
 
-@register(outgoing=True, pattern="^.mute(?: |$)(.*)")
+@register(outgoing=True, pattern="^.chup(?: |$)(.*)")
 async def spider(spdr):
     """
     This function is basically muting peeps
@@ -389,7 +389,7 @@ async def spider(spdr):
             return
 
         # If everything goes well, do announcing and mute
-        await spdr.edit("`Gets a tape!`")
+        await spdr.edit("`chup bkl`")
         if await mute(spdr.chat_id, user.id) is False:
             return await spdr.edit('`Error! User probably already muted.`')
         else:
@@ -402,7 +402,7 @@ async def spider(spdr):
                     )
                 )
                 # Announce that the function is done
-                await spdr.edit("`Safely taped!`")
+                await spdr.edit("`ma chod di`")
 
                 # Announce to logging group
                 if BOTLOG:
