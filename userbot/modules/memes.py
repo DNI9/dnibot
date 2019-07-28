@@ -175,17 +175,18 @@ FACEREACTS = [
     "(｡◕‿◕｡)",
 ]
 RUNSREACTS = [
-    "Runs to Thanos",
+    "Bhaago BC",
     "Runs far, far away from earth",
     "Running faster than usian bolt coz I'mma Bot",
-    "Runs to Marie",
-    "This Group is too cancerous to deal with.",
+    "Runs to Marie and sax",
     "Cya bois",
-    "Kys",
-    "I am a mad person. Plox Ban me.",
     "I go away",
-    "I am just walking off, coz me is too fat.",
     "I Fugged off!",
+]
+RAPETEXT = [
+    "rape incoming",
+    "ruk mc",
+	"already raped",
 ]
 DISABLE_RUN = False
 
@@ -224,7 +225,7 @@ async def kek(keks):
 async def lol(lel):
     """ Ok... """
     okay = "-_-"
-    for _ in range(10):
+    for _ in range(15):
         okay = okay[:-1] + "_-"
         await lel.edit(okay)
 
@@ -359,7 +360,11 @@ async def zal(zgfy):
 async def hoi(hello):
     """ Greet everyone! """
     await hello.edit("Hoi!😄")
-
+	
+@register(outgoing=True, pattern="^.k$")
+async def keks(kek):
+    """ k to kek """
+    await kek.edit("kek")
 
 @register(outgoing=True, pattern="^.owo(?: |$)(.*)")
 async def faces(owo):
@@ -430,6 +435,17 @@ async def enable_runs(run):
         global DISABLE_RUN
         DISABLE_RUN = False
         await run.edit("```Done!```")
+
+
+
+@register(outgoing=True, pattern="^.rape$")
+async def runner_lol(rapee):
+    """ rape for vinay """
+    if not rapee.text[0].isalpha() and rapee.text[0] not in (
+                "/", "#", "@", "!"):
+            index = random.randint(0, len(RAPETEXT) - 1)
+            reply_text = RAPETEXT[index]
+            await rapee.edit(reply_text)
 
 
 @register(outgoing=True, pattern="^.metoo$")
